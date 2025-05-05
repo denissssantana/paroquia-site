@@ -1,15 +1,18 @@
-import React from "react";
-import "./Home.css";
+import React from 'react'
+import Capelas from '../components/Capelas/Capelas'
+import Historico from '../components/Historico/Historico'
+import Informacoes from '../components/Informacoes/Informacoes'
+import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
 
 export default function Home() {
   return (
-    <section className="home">
-      <div className="container">
-        <h2>Bem-vindo à nossa paróquia</h2>
-        <p>
-          Nossa missão é evangelizar, acolher e servir. Participe de nossas celebrações e eventos.
-        </p>
-      </div>
-    </section>
-  );
+    <>
+      <Header />
+      <Historico />
+      <Capelas />
+      <Informacoes />
+      <Footer />
+    </>
+  )
 }

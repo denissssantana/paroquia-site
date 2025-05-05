@@ -1,21 +1,70 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: sans-serif;
   line-height: 1.6;
-  background-color: #fdfdfd;
-  color: #333;
-  min-height: 100vh;
 }
 
-/* Container padrão */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+main {
+  padding: 1rem;
+}
+
+.capelas-section .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.capelas-section button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #004080;
+  color: white;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .capelas-section .buttons {
+    flex-direction: column;
+  }
+}
+
+
+.secao {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.secao h2 {
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #004080; /* Fundo azul */
+  color: white; /* Texto branco */
+  border: none;
+  padding: 15px; /* Tamanho quadrado */
+  border-radius: 5px; /* Bordas levemente arredondadas */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.back-to-top:hover {
+  background-color: #003366; /* Azul mais escuro no hover */
+}
+
+.back-to-top span {
+  font-size: 18px; /* Tamanho do ícone */
 }

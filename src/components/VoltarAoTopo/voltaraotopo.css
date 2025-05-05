@@ -1,0 +1,22 @@
+.back-to-top {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .back-to-top:hover {
+    background-color: #003366;
+  }
+  
+  .back-to-top span {
+    font-size: 18px;
+  }
+  
