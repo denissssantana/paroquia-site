@@ -1,34 +1,31 @@
 import React, { useState } from 'react'
 import './header.css'
+import logo from '../../assets/header/logo.png'
 
 export default function Header() {
-  const [menuAberto, setMenuAberto] = useState(false)
+  const [menuAtivo, setMenuAtivo] = useState(false)
 
-  const alternarMenu = () => {
-    setMenuAberto(!menuAberto)
-  }
-
-  const fecharMenu = () => {
-    setMenuAberto(false)
+  const toggleMenu = () => {
+    setMenuAtivo(!menuAtivo)
   }
 
   return (
     <header className="header">
-      <div className="logo">
-        <img src="/logo.png" alt="Logo da paróquia" />
-        <h1>N. Sra do Perpétuo Socorro</h1>
+      <div className="logo-container">
+        <img src={logo} alt="Logo da Paróquia" className="logo-img" />
+        <h1 className="titulo-paroquia">
+          N. Sra do<br />Perpétuo Socorro
+        </h1>
       </div>
 
-      {/* Ícone hamburguer (mobile) */}
-      <div className="menu-hamburguer" onClick={alternarMenu}>
+      <div className="menu-hamburguer" onClick={toggleMenu}>
         ☰
       </div>
 
-      {/* Navegação */}
-      <nav className={`nav ${menuAberto ? 'ativo' : ''}`}>
-        <a href="#historico" onClick={fecharMenu}>Histórico</a>
-        <a href="#capelas" onClick={fecharMenu}>Capelas</a>
-        <a href="#informacoes" onClick={fecharMenu}>Informações</a>
+      <nav className={`nav ${menuAtivo ? 'ativo' : ''}`}>
+        <a href="#historico" onClick={toggleMenu}>Histórico</a>
+        <a href="#capelas" onClick={toggleMenu}>Capelas</a>
+        <a href="#informacoes" onClick={toggleMenu}>Informações</a>
       </nav>
     </header>
   )

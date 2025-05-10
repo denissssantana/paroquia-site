@@ -2,63 +2,58 @@
   background-color: #004080;
   color: white;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  position: relative;
+  align-items: center;
+  padding: 0 15px;
   flex-wrap: nowrap;
+  position: relative;
 }
 
-.logo {
+/* LOGO */
+.logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex: 1;
+  gap: 5px;
 }
 
-.logo img {
-  width: 50px;
-  height: 50px;
+.logo-img {
+  width: 100px;
+  height: 100px;
 }
 
-.logo h1 {
-  font-size: 1.4rem;
-  margin: 0;
+.titulo-paroquia {
+  font-size:1.7rem;
   line-height: 1.2;
-  white-space: pre-line; /* para forçar quebra de linha se quiser */
+  margin: 0;
+  white-space: pre-line; /* força quebra de linha */
+  text-align: center;
 }
 
-/* Menu Desktop */
+/* NAV LINKS */
 .nav {
   display: flex;
   align-items: center;
   gap: 20px;
-  transition: all 0.3s ease-in-out;
 }
 
 .nav a {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   padding: 6px 10px;
 }
 
-/* Ícone hamburguer */
+/* Ícone Hamburguer */
 .menu-hamburguer {
   display: none;
-  font-size: 26px;
+  font-size: 28px;
   cursor: pointer;
-  z-index: 1100;
 }
 
-/* 🔽 Responsivo até 1024px (mobile/tablet) */
+/* 📱 MOBILE & TABLET */
 @media (max-width: 1024px) {
-  .logo h1 {
-    font-size: 1.2rem;
-  }
-
   .menu-hamburguer {
     display: block;
   }
@@ -68,12 +63,12 @@
     flex-direction: column;
     position: absolute;
     background-color: #004080;
-    top: 80px;
-    right: -220px; /* inicia fora da tela */
+    top: 60px;
+    right: -220px;
     width: 200px;
     padding: 10px;
-    border-left: 2px solid white;
-    border-radius: 4px 0 0 4px;
+    border: 2px solid white;
+    border-radius: 8px; /* ⬅️ BORDA COMPLETA */
     z-index: 1000;
     opacity: 0;
     transition: right 0.3s ease-in-out, opacity 0.3s;
@@ -85,7 +80,62 @@
   }
 
   .nav a {
-    font-size: 1rem;
     padding: 10px 0;
+    font-size: 1.3rem;
   }
+
+  .titulo-paroquia {
+    font-size: 1.3rem;
+  }
+
+  .logo-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (max-width: 767px) {
+    .header {
+      padding: 0 20px 0 3px;
+    }
+
+    .nav {
+      width: 120px;
+      padding: 3px;
+
+    }
+    .nav a {
+      padding: 10px 0;
+      font-size: 1rem;
+    }
+
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1px;
+      margin-left: 0;
+        
+    }
+    
+    .titulo-paroquia {
+      font-size:1rem;
+    
+    }
+  
+    .logo-img {
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+  .menu-hamburguer {
+    margin-left: auto;
+    align-self: center;
+    
+  }
+
+
+  
+
+
 }
