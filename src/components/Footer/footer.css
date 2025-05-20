@@ -1,6 +1,85 @@
-footer {
-    background-color: #eee;
-    padding: 1rem;
-    text-align: center;
+.footer {
+  background-color: #080B58;
+  color: white;
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  text-align: center;
+}
+
+.footer-logo-img {
+  width: 90px;
+  margin-bottom: 15px;
+}
+
+.footer-coluna {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.footer-contato span,
+.footer-redes a {
+  display: block;
+  margin: 5px 0;
+  font-size: 1.3rem;
+}
+
+.footer-redes .redes-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+}
+
+.footer-redes .redes-sociais a {
+  color: white;
+  font-size: 2.8rem;
+  transition: color 0.3s;
+}
+
+.footer-redes .redes-sociais a:hover {
+  color: #ccc;
+}
+
+.footer-copy {
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  /* Logo fica no topo centralizado */
+  .footer-logo {
+    margin-bottom: 30px;
+  }
+
+  /* Contato e redes sociais lado a lado */
+  .footer-contato,
+  .footer-redes {
+    flex: unset;
+    min-width: unset;
+    width: 45%;
+    text-align: center;
+    display: inline-block;
+  }
+}

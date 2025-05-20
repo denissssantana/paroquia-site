@@ -1,22 +1,28 @@
-.back-to-top {
-    background-color: #004080;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  
-  .back-to-top:hover {
-    background-color: #003366;
-  }
-  
-  .back-to-top span {
-    font-size: 18px;
-  }
-  
+.voltar-ao-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #08086d;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px; /* 🔁 Arredondamento */
+  font-size: 0.8rem; /* 🔁 Texto menor */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.voltar-ao-topo.ativo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.voltar-ao-topo svg {
+  font-size: 1.4rem; /* 🔁 Ícone maior */
+}

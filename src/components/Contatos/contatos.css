@@ -1,0 +1,91 @@
+.contatos {
+    padding: 20px 10px;
+    margin: 10px 0;
+    background-color: #003060; /* navy blue */
+    color: white;
+  }
+  
+  
+  .contatos h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .contato-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  
+  .contato-esquerda {
+    flex: 1;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  
+  .contato-imagem {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .contato-info {
+    flex: 1;
+    min-width: 260px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  
+  .contato-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .contato-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+  
+  .contato-info h4 {
+    margin-top: 20px;
+    font-size: 1.1rem;
+  }
+  
+  .redes-sociais {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #080B58;
+    color: white;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-social:hover {
+    opacity: 0.8;
+  }
+  
