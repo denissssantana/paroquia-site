@@ -27,17 +27,49 @@
   margin-bottom: 15px;
 }
 
+.footer-logo h2 {
+  line-height: 1.43;
+  margin: 0;
+}
+
 .footer-coluna {
   flex: 1;
   min-width: 200px;
   text-align: center;
 }
 
-.footer-contato span,
-.footer-redes a {
-  display: block;
-  margin: 5px 0;
-  font-size: 1.3rem;
+.footer-contato .contato-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 1.3rem; /* Tamanho da fonte para o texto */
+  justify-content: center;
+}
+
+/* AJUSTE AQUI: Padroniza o tamanho e garante a cor dos ícones de contato */
+.footer-contato .contato-item svg {
+  width: 1.69rem;  /* Define a largura do ícone (mantendo a proporção de 1.3rem * 1.30) */
+  height: 1.69rem; /* Define a altura do ícone */
+  color: white;    /* Garante que o ícone seja branco */
+  flex-shrink: 0;  /* Impede que o ícone diminua em telas menores */
+}
+/* FIM DO AJUSTE */
+
+.footer-contato .contato-item span {
+  display: inline;
+}
+
+.footer-redes h3 {
+  font-size: 1.2rem; /* Você pode ajustar este tamanho se quiser */
+  margin-bottom: 0; /* <--- AUMENTE ESTE VALOR para aumentar a distância */
+  color: white; /* Garante que o texto seja branco */
+  margin-top: 10px; /* Remove margem padrão superior de h3 */
+}
+
+.footer-redes {
+  margin-top: 30px; /* Comece com um valor como 20px e ajuste conforme necessário */
 }
 
 .footer-redes .redes-sociais {
@@ -66,20 +98,22 @@
   .footer-container {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
-  /* Logo fica no topo centralizado */
   .footer-logo {
     margin-bottom: 30px;
   }
 
-  /* Contato e redes sociais lado a lado */
   .footer-contato,
   .footer-redes {
     flex: unset;
     min-width: unset;
-    width: 45%;
+    width: 100%;
     text-align: center;
-    display: inline-block;
+  }
+
+  .footer-contato .contato-item {
+    justify-content: center;
   }
 }

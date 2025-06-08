@@ -1,28 +1,34 @@
 .voltar-ao-topo {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 13px;
+  right: 13px;
   background-color: #08086d;
   color: white;
   border: none;
-  padding: 10px 14px;
+  padding: 7.5px 10.5px;
   border-radius: 8px; /* 🔁 Arredondamento */
-  font-size: 0.8rem; /* 🔁 Texto menor */
+  font-size: 0.6rem; /* 🔁 Texto menor */
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4.5px;
   z-index: 999;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out;
 }
 
+.voltar-ao-topo:hover {
+  background-color: #0d0d8a; /* Um tom um pouco mais claro de azul no hover */
+  transform: translateY(-3px); /* Move o botão ligeiramente para cima */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+}
+
 .voltar-ao-topo.ativo {
-  opacity: 1;
+  opacity: 0.2;
   pointer-events: auto;
 }
 
 .voltar-ao-topo svg {
-  font-size: 1.4rem; /* 🔁 Ícone maior */
+  font-size: 1rem; /* 🔁 Ícone maior */
 }

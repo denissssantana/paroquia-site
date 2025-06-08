@@ -1,8 +1,12 @@
+/* src/index.css */
+
+/* Importação de fontes */
 @import '@fontsource/poppins/400.css';
 @import '@fontsource/poppins/600.css'; /* caso queira usar títulos em negrito */
 @import '@fontsource/lato/400.css';
 @import '@fontsource/lato/700.css';
 
+/* Variáveis CSS (Paleta de cores e Fontes) */
 :root {
   /* Paleta de cores */
   --color-baby-blue: #68bbe3;
@@ -18,23 +22,24 @@
   --font-lato: 'Lato', sans-serif;
 }
 
+/* Reset CSS e Box-sizing global */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura */
 }
 
-
+/* Estilos base do Body */
 body {
   margin: 0;
-  font-family: sans-serif;
-  line-height: 1.6;
   font-family: var(--font-lato); /* Fonte base do texto */
+  line-height: 1.6;
   background-color: var(--color-white);
   color: #000;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Evita rolagem horizontal */
 }
 
+/* Estilos de Títulos */
 h1 {
   font-family: var(--font-poppins);
   font-size: 2rem;
@@ -45,17 +50,17 @@ h2 {
   font-size: 1.5rem;
 }
 
+/* Estilos de Links de Navegação (Header) */
 nav a, .nav a {
   font-family: var(--font-poppins);
 }
 
-
-
-
+/* Estilo para o elemento main (se usado) */
 main {
-  padding: 1rem;
+  padding: 1rem; /* Pode ajustar conforme necessidade */
 }
 
+/* Estilos para a seção de Capelas (exemplo) */
 .capelas-section .buttons {
   display: flex;
   flex-wrap: wrap;
@@ -73,17 +78,17 @@ main {
   border-radius: 5px;
 }
 
+/* Media Query para Capelas em telas pequenas */
 @media (max-width: 600px) {
   .capelas-section .buttons {
     flex-direction: column;
   }
 }
 
-
+/* Estilos para as Seções de Conteúdo (Historico, Capelas, etc.) */
 .secao {
-  padding: 4rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 4rem 2rem; /* Padding em todas as telas */
+  /* max-width e margin: auto removidos daqui para que ocupem 100% em telas menores */
 }
 
 .secao h2 {
@@ -91,7 +96,15 @@ main {
   margin-bottom: 1rem;
 }
 
+/* Media Query para centralizar seções em telas maiores (tablets grandes e desktops) */
+@media (min-width: 768px) { /* A partir de 768px de largura (típico de tablets) */
+  .secao {
+    max-width: 800px; /* Limita a largura máxima da seção */
+    margin: 0 auto;   /* Centraliza a seção na tela */
+  }
+}
 
+/* Estilos para o botão "Voltar ao Topo" */
 .back-to-top {
   position: fixed;
   bottom: 20px;
@@ -117,6 +130,7 @@ main {
   font-size: 18px; /* Tamanho do ícone */
 }
 
+/* Redundância para garantir que box-sizing e overflow-x sejam aplicados, embora já estejam em '*' e 'body' */
 body, html {
   margin: 0;
   padding: 0;

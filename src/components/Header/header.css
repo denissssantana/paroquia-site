@@ -56,6 +56,13 @@
   font-size: 1.2rem;
 }
 
+.nav a:hover {
+  cursor: pointer; /* Transforma o cursor em uma "mãozinha" */
+  color: #a0c4ff; /* Exemplo de cor no hover (um azul mais claro) */
+  /* Opcional: Efeito sutil de escala para indicar interatividade */
+  transform: scale(1.05);
+}
+
 .menu-hamburguer {
   display: none;
   font-size: 26px;
@@ -81,19 +88,19 @@
   .nav {
     position: absolute;
     flex-direction: column;
-    top: 80px;
+    top: 66px;
     right: -220px;
     background-color: #080B58;
     width: 200px;
     padding: 12px;
-    border-radius: 10px 0 0 10px;
+    border-radius: 0 0 0 20px;
     z-index: 1000;
     opacity: 0;
     transition: right 0.3s ease, opacity 0.3s ease;
   }
 
   .nav.ativo {
-    right: 10px;
+    right: 0;
     opacity: 1;
   }
 
