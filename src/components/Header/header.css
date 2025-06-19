@@ -1,10 +1,11 @@
+/* Estilos para Desktop (Telas Maiores que 1024px) */
 .header {
   background-color: #080B58;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 16px;
+  padding: 5px 16px;
   font-family: 'Poppins', sans-serif;
   flex-wrap: wrap;
 }
@@ -16,8 +17,8 @@
 }
 
 .logo-img {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
 }
 
 .menu-container {
@@ -29,16 +30,16 @@
 
 .nome-container {
   display: flex;
-  align-items: center;     /* Alinha verticalmente */
-  justify-content: center; /* Alinha horizontalmente o conteúdo */
-  height: 100%;            /* Garante que ocupe altura igual à da logo */
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .titulo-paroquia {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.3;
-  text-align: center;      /* Centraliza internamente */
+  font-size: 1rem;
+  line-height: 1.2;
+  text-align: center;
   margin: 0;
   color: white;
 }
@@ -53,13 +54,12 @@
   color: white;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .nav a:hover {
-  cursor: pointer; /* Transforma o cursor em uma "mãozinha" */
-  color: #a0c4ff; /* Exemplo de cor no hover (um azul mais claro) */
-  /* Opcional: Efeito sutil de escala para indicar interatividade */
+  cursor: pointer;
+  color: #a0c4ff;
   transform: scale(1.05);
 }
 
@@ -70,7 +70,9 @@
   color: white;
 }
 
-/* Responsivo até 1024px */
+/* ================================================================ */
+/* AJUSTES PARA TABLET E MOBILE (Telas Menores que 1024px)          */
+/* ================================================================ */
 @media (max-width: 1024px) {
   .logo-img {
     width: 50px;
@@ -107,5 +109,28 @@
   .nav a {
     font-size: 1.1rem;
     padding: 10px 0;
+  }
+}
+
+/* ================================================================ */
+/* AJUSTES PARA TELAS MUITO GRANDES (2K, 4K, etc.)                  */
+/* ================================================================ */
+@media (min-width: 1800px) {
+  .header {
+    padding: 10px 80px;
+  }
+
+  .logo-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .titulo-paroquia {
+    font-size: 1.3rem;
+  }
+
+  .nav a {
+    font-size: 1.4rem;
+    gap: 60px;
   }
 }
