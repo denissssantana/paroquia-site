@@ -1,9 +1,110 @@
-#historico {
-    padding: 2rem;
-    background-color: #eef2f7;
+.historico-section {
+  background-color: #080B58; /* Cor de fundo principal */
+  color: white;
+  padding: 40px 20px; /* Espaçamento interno da seção */
+}
+
+.historico-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.historico-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 20px;
+  padding-bottom: 10px; /* Espaço para a linha embaixo */
+  border-bottom: 3px solid white; /* Linha embaixo do título */
+  display: inline-block; /* Para a linha ter a largura do texto */
+}
+
+.historico-carousel {
+  position: relative; /* Necessário para posicionar a seta */
+  margin-bottom: 30px;
+}
+
+.historico-carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Estilo da seta (pode ser aprimorado depois) */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.carousel-arrow.next {
+  right: 15px;
+}
+
+.historico-quote {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 0 40px 0;
+  padding: 20px;
+  border-left: 4px solid #a0c4ff;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0 8px 8px 0;
+}
+
+.parocos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaço entre cada item da lista de párocos */
+}
+
+.paroco-item {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espaço entre a foto e o texto */
+}
+
+.paroco-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; /* Deixa a imagem redonda */
+  object-fit: cover; /* Garante que a imagem não fique distorcida */
+  border: 2px solid white;
+}
+
+.paroco-info p {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+.paroco-info p strong {
+  font-weight: 600;
+}
+
+/* =============================================== */
+/* AJUSTES PARA TELAS MAIORES (DESKTOP)            */
+/* =============================================== */
+@media (min-width: 768px) {
+  .historico-title {
+    font-size: 2.2rem;
   }
-  
-  #historico h2 {
-    color: #004080;
+
+  .historico-quote {
+    font-size: 1.3rem;
   }
-  
+
+  .paroco-info p {
+    font-size: 1rem;
+  }
+}

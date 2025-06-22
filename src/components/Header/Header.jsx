@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react"; // Importe useEffect
+import React, { useState, useEffect } from "react";
 import "./header.css";
 import logo from "../../assets/header/logo.png";
 import { FaBars } from "react-icons/fa";
-import { Link } from "react-scroll";
+
+// REMOVEMOS a importação do 'Link' de 'react-scroll'
 
 export default function Header() {
   const [menuAtivo, setMenuAtivo] = useState(false);
@@ -15,24 +16,17 @@ export default function Header() {
     setMenuAtivo(false);
   };
 
-  // NOVO: useEffect para fechar o menu ao rolar a página
   useEffect(() => {
     const handleScroll = () => {
-      // Se o menu estiver ativo (aberto), feche-o
       if (menuAtivo) {
         closeMenu();
       }
     };
-
-    // Adiciona o ouvinte de evento de scroll na janela
     window.addEventListener("scroll", handleScroll);
-
-    // Função de limpeza: remove o ouvinte de evento quando o componente é desmontado
-    // Isso é crucial para evitar vazamentos de memória e comportamentos indesejados
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [menuAtivo]); // O efeito é re-executado se 'menuAtivo' mudar.
+  }, [menuAtivo]);
 
   return (
     <header className="header">
@@ -49,19 +43,21 @@ export default function Header() {
         </div>
       </div>
 
+      {/* AGORA USAMOS UMA TAG <nav> PADRÃO COM LINKS <a> */}
       <nav className={`nav ${menuAtivo ? "ativo" : ""}`}>
-        <Link to="historico" smooth={true} duration={500} onClick={closeMenu}>
+        {/* O href aponta para o 'id' da seção que você quer rolar */}
+        <a href="#historico" onClick={closeMenu}>
           Histórico
-        </Link>
-        <Link to="capelas" smooth={true} duration={500} onClick={closeMenu}>
+        </a>
+        <a href="#capelas" onClick={closeMenu}>
           Capelas
-        </Link>
-        <Link to="informacoes" smooth={true} duration={500} onClick={closeMenu}>
+        </a>
+        <a href="#informacoes" onClick={closeMenu}>
           Informações
-        </Link>
-        <Link to="contatos" smooth={true} duration={500} onClick={closeMenu}>
+        </a>
+        <a href="#contatos" onClick={closeMenu}>
           Contatos
-        </Link>
+        </a>
       </nav>
 
       <div className="menu-hamburguer" onClick={toggleMenu}>
